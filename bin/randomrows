@@ -1,0 +1,9 @@
+#!/bin/bash
+if [[ $# -lt 1 ]]; then
+    echo "Usage: showrandom <file> [number_of_random_rows]"
+    exit 1
+fi
+
+num_rows=${2:-5}  # Default to 5 if no second argument is provided
+
+{ head -n 1 "$1"; tail -n +2 "$1" | awk 'BEGIN {srand()} {print rand(), $0}' | sort -k1,1n | cut -d' ' -f2- | head -n "$num_rows"; }
