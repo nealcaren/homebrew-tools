@@ -1,2 +1,20 @@
-.aider*
+# macOS system files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Development tools
+.aider*
