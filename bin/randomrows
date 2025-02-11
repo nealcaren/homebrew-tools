@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Ensure a file is provided
 if [[ $# -lt 1 ]]; then
     echo "Usage: showrandom <file> [number_of_random_rows]"
     exit 1
@@ -6,4 +8,8 @@ fi
 
 num_rows=${2:-5}  # Default to 5 if no second argument is provided
 
-{ head -n 1 "$1"; tail -n +2 "$1" | awk 'BEGIN {srand()} {print rand(), $0}' | sort -k1,1n | cut -d' ' -f2- | head -n "$num_rows"; }
+# Ensure sorting works even with special characters
+export LC_ALL=C
+
+# Use awk, sort, and head to extract random rows
+{ head -n 1 "$1"; tail -n +2 "$1" | awk 'BEGIN {srand()} {print rand(), $0}' | sort -t ',' -k1,1n | cut -d' ' -f2- | head -n "$num_rows"; }
