@@ -3,7 +3,7 @@ class Randomrows < Formula
   homepage "https://github.com/nealcaren/homebrew-tools"
   url "https://github.com/nealcaren/homebrew-tools/archive/refs/tags/v1.1.tar.gz"
   sha256 "01f8518ce2492b86ebdd20530c5d99c8afad8506e24392d6aced8062c22bc0ca"
-  version "1.0"
+  version "1.1"
 
   def install
     bin.install "bin/randomrows"
