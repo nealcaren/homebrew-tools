@@ -1,10 +1,10 @@
 class Randomrows < Formula
   desc "Display the header and random rows from a CSV or text file"
-  homepage "https://github.com/nealcaren/homebrew-tools"
-  url "https://github.com/nealcaren/homebrew-tools/archive/v1.2.tar.gz"
-  sha256 "5e8cc9f19391289aa26c59e12ec319075842cdd5f5f065218d8602e7f612d244"
-  version "1.2.0"
-  head "https://github.com/nealcaren/homebrew-tools.git", branch: "main"
+  homepage "https://github.com/nealcaren/homebrew-randomrows"
+  url "https://github.com/nealcaren/homebrew-randomrows/archive/v1.3.tar.gz"
+  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  version "1.3.0"
+  head "https://github.com/nealcaren/homebrew-randomrows.git", branch: "main"
 
   def install
     bin.install "bin/randomrows"
