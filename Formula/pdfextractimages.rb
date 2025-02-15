@@ -7,7 +7,6 @@ class Pdfextractimages < Formula
 
   depends_on "python@3.12"
 
-
   def install
     bin.install "bin/extractpdfimages"
     bin.install "bin/pdfextractimages.py"
