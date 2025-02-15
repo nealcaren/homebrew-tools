@@ -5,6 +5,8 @@ class Pdfextractimages < Formula
   sha256 "b3bcba20ef8c9678260eeb8670cc6f08cc3577426adb608521b97b7b0b16b12d"
   license "MIT"
 
+  depends_on "python@3.12"
+
 
   def install
     bin.install "bin/extractpdfimages"
