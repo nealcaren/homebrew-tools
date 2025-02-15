@@ -9,6 +9,7 @@ class Pdfextractimages < Formula
   def install
     bin.install "bin/extractpdfimages"
     bin.install "bin/pdfextractimages.py" => "pdfextractimages"
+    chmod 0755, bin/"pdfextractimages"
   end
 
   test do
