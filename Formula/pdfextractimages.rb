@@ -8,7 +8,7 @@ class Pdfextractimages < Formula
 
   def install
     bin.install "bin/extractpdfimages"
-    bin.install "bin/pdfextractimages.py"
+    bin.install "bin/pdfextractimages.py" => "pdfextractimages"
   end
 
   test do
